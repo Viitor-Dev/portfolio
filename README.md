@@ -1,6 +1,6 @@
 # Portfólio de Vitor Higino
 
-Portfólio pessoal de um vibe coder: uma parede urbana escura onde o site reage a quem visita.
+Portfólio de Vitor Higino, que também apresenta o serviço de criação de sites. O visual é uma parede urbana escura onde o site reage a quem visita.
 
 **Ver online:** https://viitor-dev.github.io/portfolio/
 
@@ -8,22 +8,23 @@ Portfólio pessoal de um vibe coder: uma parede urbana escura onde o site reage 
 
 - **Abertura em forma de pôster**, com um personagem ilustrado que segue o mouse e reage ao clique.
 - **Papel que rasga com a rolagem**, de cima para baixo, com fibras, dobra e pedaços soltos.
-- **Quatro projetos em faixas coloridas**, que abrem com o mouse, o toque ou o foco do teclado.
-- **Lanterna do Vale Ermo 2**, ligada e desligada por clique. O feixe sai do personagem e segue o ponteiro.
-- **Bastidores** sobre vibe coding e sobre como cada efeito foi feito.
+- **Três projetos em faixas coloridas**, que abrem com o mouse, o toque ou o foco do teclado.
+- **Página do Vale Ermo 2**, com a lanterna ligada e desligada por clique. O feixe sai do personagem e segue o ponteiro.
+- **Serviços**: portfólio, sites de venda e vitrine digital.
+- **Como eu desenvolvo** e os bastidores de cada efeito deste site.
 
 ## Projetos apresentados
 
 | Projeto | Situação | Link |
 |---|---|---|
-| Vale Ermo 2 | Em desenvolvimento | [Jogar](https://vale-ermo-coop.onrender.com/) |
-| Dara Sublimação | Concluído e em uso | [Abrir a vitrine](https://dara-sublimacao-vitrine.conectanegocio.chatgpt.site/) |
+| Dara Sublimação | Concluído e em uso | [Conhecer a vitrine](https://dara-sublimacao-vitrine.conectanegocio.chatgpt.site/) |
+| Vale Ermo 2 | Em desenvolvimento | [Jogar no navegador](https://vale-ermo-coop.onrender.com/) |
 | Coletivo Code | Atividade de curso | [Abrir o site](https://viitor-dev.github.io/coletivo-code/) |
 | Guia de Prompts | Concluído | [Ler no GitHub](https://github.com/Viitor-Dev/guia-prompts-ia) |
 
 ## Como foi feito
 
-Este site foi criado com vibe coding: Vitor definiu a ideia, escolheu as referências, testou e aprovou cada etapa, e a IA escreveu o código.
+Vitor definiu a ideia, escolheu as referências, testou e aprovou cada etapa, usando inteligência artificial como apoio no desenvolvimento.
 
 - HTML, CSS e JavaScript, sem etapa de compilação.
 - [GSAP](https://gsap.com) com ScrollTrigger para o rasgo.

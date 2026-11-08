@@ -226,11 +226,12 @@ if (lanterna) {
     acendeu = performance.now();
     botao.textContent = acesa ? 'Desligar a lanterna' : 'Ligar a lanterna';
     botao.setAttribute('aria-pressed', String(acesa));
+    lanterna.classList.toggle('acesa', acesa);
     legenda.textContent = acesa ? 'Agora mexa a lanterna para encontrar o caminho.' : 'Luz apagada. Clique para ligar a lanterna.';
     if (quieto) pintar();
   };
   botao.addEventListener('click', (e) => { e.stopPropagation(); alternar(); });
-  lanterna.addEventListener('click', (e) => { if (!e.target.closest('a,button')) alternar(); });
+  lanterna.addEventListener('click', (e) => { if (!e.target.closest('a,button,.ficha')) alternar(); });
   addEventListener('resize', medir);
   medir();
   const lente = () => {
@@ -306,4 +307,27 @@ if (lanterna) {
   };
   if (quieto) pintar();
   else requestAnimationFrame(quadroL);
+}
+
+// Abertura: em telas largas e baixas, o nome encolhe até não encostar na etiqueta
+{
+  const largo = matchMedia('(min-width: 821px) and (min-aspect-ratio: 1/1)');
+  const ajustarNome = () => {
+    const raiz = document.documentElement;
+    raiz.style.removeProperty('--h1tam');
+    if (!largo.matches) return;
+    const h1 = document.querySelector('#inicio h1');
+    const etq = document.querySelector('#inicio .etiqueta');
+    if (!h1 || !etq) return;
+    const a = h1.getBoundingClientRect();
+    const b = etq.getBoundingClientRect();
+    const livre = b.top - 18 - a.top;
+    if (a.height > livre) {
+      const atual = parseFloat(getComputedStyle(h1).fontSize);
+      raiz.style.setProperty('--h1tam', Math.max(56, Math.floor(atual * livre / a.height)) + 'px');
+    }
+  };
+  ajustarNome();
+  if (document.fonts) document.fonts.ready.then(ajustarNome);
+  addEventListener('resize', ajustarNome);
 }

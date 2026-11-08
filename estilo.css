@@ -165,3 +165,99 @@ h3{margin:0;font:400 clamp(30px,3vw,44px)/1 var(--titulo);text-transform:upperca
 .aponta{max-width:92%}
 }
 @media (prefers-reduced-motion:reduce){.poster,.poster>*,.foto img,.zap{transition:none!important}}
+
+/* Revisão de conteúdo: chamada, serviços, apresentação e contato */
+.etiqueta .chamada{margin:0 0 8px;font:400 clamp(25px,2.3vw,31px)/1.02 var(--titulo);text-transform:uppercase;letter-spacing:.01em}
+.etiqueta .chamada+p{margin:0;font-size:16px}
+.trabalhos .intro{margin:-14px 0 28px;font:400 clamp(24px,3vw,40px)/1 var(--titulo);text-transform:uppercase;color:var(--papel)}
+.rasgo-on .trabalhos .intro{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);margin:0}
+.sob small{margin-top:.3em;font:400 min(4.4vw,6.6vh)/1 var(--titulo);text-transform:uppercase;white-space:nowrap;letter-spacing:.01em}
+.servicos{padding:clamp(64px,10vh,110px) var(--borda);background:var(--asfalto);display:grid;gap:22px;justify-items:start}
+.servicos h2{color:var(--papel);max-width:20ch}
+.serv-intro{margin:0;max-width:56ch;font-size:19px}
+.modos{list-style:none;margin:26px 0 10px;padding:0;width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
+.modos li{position:relative;padding:40px 22px 24px;background:var(--papel);color:var(--tinta);filter:drop-shadow(7px 9px 0 rgba(0,0,0,.5))}
+.modos li:nth-child(1){transform:rotate(-1.2deg)}
+.modos li:nth-child(2){transform:rotate(.8deg);background:var(--limao)}
+.modos li:nth-child(2) .fita{background:rgba(233,229,218,.9)}
+.modos li:nth-child(3){transform:rotate(-.6deg)}
+.modos h3{font-size:clamp(30px,3vw,42px)}
+.modos p{margin:10px 0 0;font-size:17px}
+.botao.serv-cta{flex:none;margin-top:14px;background:var(--limao);color:var(--tinta);box-shadow:none;padding:12px 24px}
+.botao.serv-cta:hover{box-shadow:4px 4px 0 var(--azul)}
+.apresenta{margin:16px 0 0;max-width:58ch;font-size:18px}
+.tags li.area{background:var(--limao)}
+.ferr{margin:6px 0 0}
+.ferr b{font-weight:600;color:var(--limao)}
+.final-texto{margin:14px 0 0;max-width:44ch;font-size:19px;font-weight:500}
+@media (max-width:820px){
+.modos{grid-template-columns:minmax(0,1fr)}
+.trabalhos .intro{margin-top:-14px}
+.etiqueta .chamada{font-size:24px}
+.etiqueta .chamada+p{font-size:15px}
+}
+
+/* Página do jogo */
+.vale-texto .carimbo{margin:0;padding:4px 10px;background:#c4281c;color:#fff;font:600 13px var(--mono)}
+.vale-desc{margin:0;max-width:40ch;font-size:19px}
+
+/* Abertura em telas largas: etiqueta mais larga e baixa; o nome encolhe se faltar altura (app.js) */
+h1{font-size:var(--h1tam,min(30.5vh,17.6vw))}
+@media (min-width:821px) and (min-aspect-ratio:1/1){
+.etiqueta{width:min(560px,calc(100% - 2*var(--borda)));padding:40px 24px 22px}
+.etiqueta nav{flex-wrap:nowrap}
+.etiqueta .botao{flex:1 1 auto;white-space:nowrap}
+.rabisco{left:calc(var(--borda) + 600px);bottom:20vh}
+.seta{left:calc(var(--borda) + 640px);bottom:36vh}
+}
+@media (min-width:821px) and (max-width:1300px) and (min-aspect-ratio:1/1){.rabisco,.seta{display:none}}
+
+/* Ficha do jogo: o que é, em que estado está e onde jogar */
+.vale-texto{gap:22px;max-width:min(500px,calc(100% - 2*var(--borda)))}
+.ficha{position:relative;display:grid;gap:14px;justify-items:start;text-align:left;padding:26px 26px 22px;background:rgba(10,10,11,.86);border:2px solid #c4281c;box-shadow:8px 8px 0 rgba(196,40,28,.35);cursor:default}
+.ficha h2{font-size:clamp(52px,6.4vw,96px);line-height:.92}
+.status{margin:0;display:inline-flex;align-items:center;gap:9px;padding:6px 12px;background:#c4281c;color:#fff;font:600 13px var(--mono);letter-spacing:.04em;text-transform:uppercase}
+.ponto{width:9px;height:9px;border-radius:50%;background:#fff}
+@media (prefers-reduced-motion:no-preference){.ponto{animation:piscar 1.4s steps(2,jump-none) infinite}}
+@keyframes piscar{50%{opacity:.2}}
+.ficha .vale-desc{max-width:none;font-size:18px}
+.dados{margin:0;width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(233,229,218,.25);border-bottom:1px solid rgba(233,229,218,.25)}
+.dados div{padding:10px 12px 10px 0}
+.dados div+div{padding-left:12px;border-left:1px solid rgba(233,229,218,.25)}
+.dados dt{font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#e86a5f}
+.dados dd{margin:4px 0 0;font:500 15px/1.25 var(--corpo)}
+.botao.jogar{width:100%;min-height:56px;font-size:17px}
+.nota{margin:-6px 0 0;font:500 13px var(--mono);color:rgba(233,229,218,.7)}
+.dica-luz{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+.dica-luz p{margin:0;font:400 19px/1.1 var(--mao);color:var(--limao);max-width:22ch;text-align:right}
+@media (max-width:820px){
+.vale-texto{top:20px;gap:16px}
+.ficha{padding:20px 18px 18px}
+.dados{grid-template-columns:minmax(0,1fr)}
+.dados div,.dados div+div{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-left:0}
+.dados div+div{border-top:1px solid rgba(233,229,218,.18)}
+.dados dd{margin:0;text-align:right}
+.dica-luz{justify-content:flex-start}
+.dica-luz p{text-align:left}
+}
+@media (min-width:821px){
+.vale-texto{max-width:min(580px,calc(100% - 2*var(--borda)));top:50%;transform:translateY(-50%);gap:18px}
+.ficha{gap:12px;padding:22px 24px 20px}
+.ficha h2{font-size:clamp(48px,min(5.4vw,10vh),88px);white-space:nowrap}
+}
+.vale-texto .status{font-size:13px}
+.vale-texto .nota{font-size:13px}
+.vale-texto .dica-luz p{font-size:19px}
+@media (max-width:820px){
+.lanterna{height:auto;min-height:100svh;padding:20px var(--borda) 44vh}
+.vale-texto{position:relative;top:auto;left:auto;right:auto;max-width:none}
+.com-lanterna{height:42vh}
+}
+
+/* Lanterna ligada: a ficha fica translúcida e a luz passa por baixo dela */
+.ficha{transition:background .5s,border-color .5s,box-shadow .5s}
+.ficha>*{transition:opacity .5s}
+.lanterna.acesa .ficha{background:rgba(10,10,11,.18);border-color:rgba(196,40,28,.45);box-shadow:none}
+.lanterna.acesa .ficha>:not(.jogar){opacity:.4}
+.lanterna.acesa .ficha:focus-within>*{opacity:1}
+@media (prefers-reduced-motion:reduce){.ficha,.ficha>*{transition:none}}
