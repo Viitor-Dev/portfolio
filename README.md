@@ -24,12 +24,13 @@ Portfólio de Vitor Higino, que também apresenta o serviço de criação de sit
 
 ## Como foi feito
 
-Vitor definiu a ideia, escolheu as referências, testou e aprovou cada etapa, usando inteligência artificial como apoio no desenvolvimento.
+Vitor definiu a ideia, escolheu as referências, testou e aprovou cada etapa. A inteligência artificial foi uma das ferramentas usadas no desenvolvimento.
 
 - HTML, CSS e JavaScript, sem etapa de compilação.
 - [GSAP](https://gsap.com) com ScrollTrigger para o rasgo.
 - Canvas 2D para a luz da lanterna.
 - Personagem ilustrado criado com IA a partir de uma foto.
+- Capas dos projetos e cena do Vale Ermo 2 geradas com IA (ChatGPT).
 
 O visitante que prefere menos movimento, nas configurações do aparelho, vê o conteúdo sem o rasgo.
 
@@ -40,7 +41,7 @@ index.html    página única, com todo o conteúdo
 estilo.css    identidade visual e responsividade
 app.js        rasgo, personagem, faixas e lanterna
 servir.mjs    servidor simples para rodar no computador
-img/          personagem, capturas, foto e ícones
+img/          personagem, capas dos projetos, foto e ícones
 vendor/       GSAP e ScrollTrigger
 ```
 

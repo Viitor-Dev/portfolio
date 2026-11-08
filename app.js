@@ -231,7 +231,10 @@ if (lanterna) {
     if (quieto) pintar();
   };
   botao.addEventListener('click', (e) => { e.stopPropagation(); alternar(); });
-  lanterna.addEventListener('click', (e) => { if (!e.target.closest('a,button,.ficha')) alternar(); });
+  // No toque, o dedo só mira; quem liga e desliga é o botão
+  let toque = false;
+  lanterna.addEventListener('pointerdown', (e) => { toque = e.pointerType !== 'mouse'; }, {passive: true});
+  lanterna.addEventListener('click', (e) => { if (!toque && !e.target.closest('a,button,.ficha')) alternar(); });
   addEventListener('resize', medir);
   medir();
   const lente = () => {
@@ -330,4 +333,42 @@ if (lanterna) {
   ajustarNome();
   if (document.fonts) document.fonts.ready.then(ajustarNome);
   addEventListener('resize', ajustarNome);
+}
+
+// WhatsApp fixo: só depois da abertura e nunca junto com o contato
+{
+  const zap = document.getElementById('zapFixo');
+  const inicio = document.getElementById('inicio');
+  const contato = document.getElementById('contato');
+  if (zap && inicio && contato) {
+    const visivel = new Map();
+    const atualizar = () => { zap.classList.toggle('ver', !visivel.get(inicio) && !visivel.get(contato)); if (typeof agendar === 'function') agendar(); };
+    const olho = new IntersectionObserver((itens) => {
+      for (const e of itens) visivel.set(e.target, e.isIntersecting);
+      atualizar();
+    });
+    olho.observe(inicio);
+    olho.observe(contato);
+    // Sobre fundo verde-limão, o botão troca para a versão escura
+    const LIMAO = 'rgb(200, 240, 49)';
+    const fundoEmbaixo = () => {
+      const r = zap.getBoundingClientRect();
+      const pilha = document.elementsFromPoint(r.left + r.width / 2, r.top + r.height / 2);
+      for (const el of pilha) {
+        if (el === zap || zap.contains(el)) continue;
+        const cor = getComputedStyle(el).backgroundColor;
+        if (cor !== 'rgba(0, 0, 0, 0)' && cor !== 'transparent') return cor;
+      }
+      return '';
+    };
+    let pedido = false;
+    const conferirFundo = () => {
+      pedido = false;
+      if (zap.classList.contains('ver')) zap.classList.toggle('escuro', fundoEmbaixo() === LIMAO);
+    };
+    const agendar = () => { if (!pedido) { pedido = true; requestAnimationFrame(conferirFundo); } };
+    addEventListener('scroll', agendar, {passive: true});
+    addEventListener('resize', agendar);
+    document.addEventListener('pointerover', agendar, {passive: true});
+  }
 }

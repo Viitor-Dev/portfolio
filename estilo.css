@@ -261,3 +261,19 @@ h1{font-size:var(--h1tam,min(30.5vh,17.6vw))}
 .lanterna.acesa .ficha>:not(.jogar){opacity:.4}
 .lanterna.acesa .ficha:focus-within>*{opacity:1}
 @media (prefers-reduced-motion:reduce){.ficha,.ficha>*{transition:none}}
+
+/* Revisão de qualidade: títulos sem palavra sozinha na última linha */
+h1,h2,h3,.etiqueta .chamada,.sob small{text-wrap:balance}
+p{text-wrap:pretty}
+.seta-ext{margin-left:.45em}
+
+/* WhatsApp fixo: aparece depois da abertura e some quando o contato está na tela */
+.zap-fixo{position:fixed;z-index:50;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:10px 18px 10px 14px;background:var(--limao);color:var(--tinta);font:600 15px var(--mono);text-decoration:none;transform:rotate(-2deg) translateY(12px);box-shadow:5px 6px 0 var(--tinta),5px 6px 0 2px var(--papel);opacity:0;visibility:hidden;transition:opacity .25s,transform .25s,visibility 0s .25s}
+.zap-fixo img{display:block;width:26px;height:26px}
+.zap-fixo.ver{opacity:1;visibility:visible;transform:rotate(-2deg);transition:opacity .25s,transform .25s}
+.zap-fixo:hover{transform:rotate(-2deg) translate(-2px,-2px)}
+@media (max-width:820px){.zap-fixo{width:56px;height:56px;min-height:0;padding:0;justify-content:center}.zap-fixo span{display:none}.zap-fixo img{width:30px;height:30px}}
+@media (prefers-reduced-motion:reduce){.zap-fixo,.zap-fixo.ver{transition:none}}
+.zap-fixo{transition:opacity .25s,transform .25s,background .3s,color .3s,box-shadow .3s,visibility 0s .25s}
+.zap-fixo.ver{transition:opacity .25s,transform .25s,background .3s,color .3s,box-shadow .3s}
+.zap-fixo.escuro{background:var(--tinta);color:var(--limao);box-shadow:5px 6px 0 var(--azul),5px 6px 0 2px var(--papel)}

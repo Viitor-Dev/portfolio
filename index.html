@@ -27,7 +27,7 @@
     <h1 id="titulo"><span>Vitor</span> <span>Higino</span></h1>
 
     <button class="personagem" id="personagem" type="button" aria-label="Cutucar o personagem do Vitor">
-      <img class="pose ativa" data-pose="parado" src="img/pose0.webp" alt="" width="1100" height="1200">
+      <img class="pose ativa" data-pose="parado" src="img/pose0.webp" alt="" width="1100" height="1200" fetchpriority="high">
       <img class="pose" data-pose="surpresa" src="img/pose1.webp" alt="" width="1100" height="1200">
     </button>
 
@@ -37,8 +37,8 @@
 
     <div class="etiqueta" data-rasgo>
       <span class="fita" aria-hidden="true"></span>
-      <p class="chamada">Criação de sites para apresentar seu negócio na internet.</p>
-      <p>Crio sites com apoio de inteligência artificial, atenção ao visual e testes de funcionamento.</p>
+      <p class="chamada">Gostou deste site?<br>O seu pode ser assim.</p>
+      <p>Crio portfólios, sites de venda e vitrines digitais com visual próprio, pensados para a imagem que você quer passar na internet.</p>
       <nav aria-label="Ações principais">
         <a class="botao principal" href="#trabalhos">Ver meus projetos</a>
         <a class="botao" href="#contato">Conversar sobre meu site</a>
@@ -52,21 +52,21 @@
     <p class="intro">Minha experiência com criação digital</p>
     <div class="parede" id="parede">
       <article class="poster p-dara ativo" data-nome="Dara Sublimação">
-        <a class="foto" tabindex="-1" href="https://dara-sublimacao-vitrine.conectanegocio.chatgpt.site/" target="_blank" rel="noopener"><img src="img/dara.png" alt="Página inicial da vitrine Dara Sublimação." loading="lazy"></a>
+        <a class="foto" tabindex="-1" href="https://dara-sublimacao-vitrine.conectanegocio.chatgpt.site/" target="_blank" rel="noopener"><img src="img/capa-dara.webp" width="1280" height="720" alt="Vitrine da Dara Sublimação aberta no notebook e no celular, ao lado de canecas e almofadas personalizadas." loading="lazy"></a>
         <p class="carimbo">Concluído e em uso</p>
         <h3>Dara Sublimação</h3>
         <p class="desc">Vitrine digital de produtos personalizados, com catálogo, opções de personalização e encaminhamento do pedido pelo WhatsApp.</p>
         <a class="ver" href="https://dara-sublimacao-vitrine.conectanegocio.chatgpt.site/" target="_blank" rel="noopener">Conhecer a vitrine</a>
       </article>
       <article class="poster p-cole" data-nome="Coletivo Code">
-        <a class="foto" tabindex="-1" href="https://viitor-dev.github.io/coletivo-code/" target="_blank" rel="noopener"><img src="img/coletivo.jpg" width="1280" height="720" alt="Página inicial do site Coletivo Code." loading="lazy"></a>
+        <a class="foto" tabindex="-1" href="https://viitor-dev.github.io/coletivo-code/" target="_blank" rel="noopener"><img src="img/capa-coletivo.webp" width="1280" height="720" alt="Turma de desenvolvimento web trabalhando junta em notebooks, com esboços de site na parede." loading="lazy"></a>
         <p class="carimbo">Atividade de curso</p>
         <h3>Coletivo Code</h3>
         <p class="desc">Projeto de curso criado para apresentar nossa turma de desenvolvimento web e sua trajetória.</p>
         <a class="ver" href="https://viitor-dev.github.io/coletivo-code/" target="_blank" rel="noopener">Conhecer o projeto</a>
       </article>
       <article class="poster p-guia" data-nome="Guia de Prompts">
-        <a class="foto capa-guia" tabindex="-1" href="https://github.com/Viitor-Dev/guia-prompts-ia" target="_blank" rel="noopener" aria-label="Abrir o Guia de Prompts no GitHub"><span>Prompt,<br>teste,<br>repete.</span></a>
+        <a class="foto" tabindex="-1" href="https://github.com/Viitor-Dev/guia-prompts-ia" target="_blank" rel="noopener"><img src="img/capa-guia.webp" width="1280" height="720" alt="Mesa de trabalho com notebook, caderno de anotações e cartões com os passos para escrever instruções para a IA." loading="lazy"></a>
         <p class="carimbo">Concluído</p>
         <h3>Guia de Prompts</h3>
         <p class="desc">Guia para quem está começando a usar inteligência artificial, com orientações e exemplos para escrever instruções mais claras.</p>
@@ -75,7 +75,7 @@
     </div>
       </section>
   <section class="lanterna" id="vale-ermo" aria-labelledby="t-vale">
-    <img class="cena" src="img/capela.jpg" width="1200" height="675" alt="Capela escura de São Brás vista de cima, com a personagem entre os bancos." loading="lazy">
+    <img class="cena" src="img/capa-vale-ermo.webp" width="1280" height="720" alt="Clínica e capela abandonadas vistas de cima, com um rastro de pegadas que leva até uma porta iluminada de vermelho" loading="lazy">
     <canvas class="breu" id="breu" aria-hidden="true"></canvas>
     <div class="vale-texto">
       <article class="ficha">
@@ -87,7 +87,7 @@
           <div><dt>Visão</dt><dd>Isométrica</dd></div>
           <div><dt>Onde jogar</dt><dd>No navegador</dd></div>
         </dl>
-        <a class="botao sangue jogar" href="https://vale-ermo-coop.onrender.com/" target="_blank" rel="noopener">Jogar a versão de teste <span aria-hidden="true">↗</span></a>
+        <a class="botao sangue jogar" href="https://vale-ermo-coop.onrender.com/" target="_blank" rel="noopener">Jogar a versão de teste <span class="seta-ext" aria-hidden="true">↗</span></a>
         <p class="nota">Abre em uma nova aba.</p>
       </article>
       <div class="dica-luz">
@@ -95,7 +95,7 @@
         <button class="botao luz" id="botaoLuz" type="button" aria-pressed="false">Ligar a lanterna</button>
       </div>
     </div>
-    <img class="com-lanterna" id="comLanterna" src="img/pose4.webp" width="943" height="1248" alt="">
+    <img class="com-lanterna" id="comLanterna" src="img/pose4.webp" width="943" height="1248" alt="" loading="lazy">
   </section>
 
   <section class="servicos" id="servicos" aria-labelledby="t-serv">
@@ -112,13 +112,13 @@
     <h2 id="t-bast">Como eu desenvolvo</h2>
     <div class="bast-texto">
       <p>Cada projeto começa com um objetivo: o que precisa ser apresentado, para quem e como a pessoa vai usar o site. A partir disso, organizo as ideias e as referências para orientar a criação.</p>
-      <p>Uso inteligência artificial como apoio durante o desenvolvimento. Testo as funcionalidades, comparo o resultado com a proposta e ajusto o que precisa melhorar. Também uso esse processo para aprofundar meus conhecimentos em desenvolvimento web.</p>
+      <p>No desenvolvimento, uso ferramentas atuais, entre elas a inteligência artificial, para ganhar agilidade. Eu defino a estrutura, o visual e os textos, testo cada funcionalidade e ajusto o que for preciso antes da entrega.</p>
     </div>
     <h3 class="como">Bastidores deste portfólio</h3>
     <ol class="truques">
       <li><strong>O papel rasgado</strong><span>A abertura vira duas folhas. A rolagem abre o rasgo de cima para baixo, com fibra, dobra e pedaços de papel soltos.</span></li>
       <li><strong>A lanterna</strong><span>Um clique liga. O feixe sai da lanterna do personagem e aponta para o mouse ou o dedo, recortando o escuro em tempo real.</span></li>
-      <li><strong>O personagem</strong><span>Criado com IA a partir da minha foto e recortado como adesivo. Ele reage ao ponteiro e ao clique.</span></li>
+      <li><strong>O personagem</strong><span>Ilustrado a partir da minha foto com uma ferramenta de IA e recortado como adesivo. Ele reage ao ponteiro e ao clique.</span></li>
     </ol>
   </section>
 
@@ -126,13 +126,11 @@
     <figure class="polaroide"><img src="img/vitor.jpg" width="636" height="630" alt="Vitor Higino sorrindo em uma selfie ao pôr do sol." loading="lazy"></figure>
     <div>
       <h2 id="t-quem">Quem é o Vitor</h2>
-      <p class="apresenta">Sou Vitor Higino, técnico em informática e estudante de desenvolvimento de páginas web. Tenho interesse em interfaces, jogos e experiências interativas. Desenvolvo projetos para colocar ideias em prática, ampliar meus conhecimentos e criar soluções para diferentes necessidades.</p>
+      <p class="apresenta">Sou Vitor Higino, técnico em informática e estudante de desenvolvimento de páginas web. Tenho interesse em interfaces, jogos e experiências interativas. Desenvolvo sites e projetos interativos, do planejamento aos testes.</p>
       <ul class="tags">
         <li class="area">Programação de páginas web <small>Senac PB, em andamento</small></li>
         <li class="area">Técnico em informática <small>Pronatec PB, 2017</small></li>
         <li class="area">Introdução à cibersegurança <small>Santander Open Academy, em andamento</small></li>
-        <li>Tecnólogo em Processos Gerenciais <small>Uniasselvi PB, em andamento</small></li>
-        <li>Assistente administrativo <small>IFSul, concluído</small></li>
       </ul>
       <p class="ferr"><b>Tecnologias:</b> HTML, CSS e JavaScript</p>
       <p class="ferr"><b>Ferramentas de apoio:</b> Claude Code, Codex e Antigravity</p>
@@ -154,5 +152,6 @@
     </div>
   </section>
 </main>
+<a class="zap-fixo" id="zapFixo" href="https://wa.me/558398804699" target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp"><img src="img/icones/whatsapp.svg" width="26" height="26" alt=""><span>WhatsApp</span></a>
 </body>
 </html>
