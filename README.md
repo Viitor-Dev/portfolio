@@ -12,6 +12,7 @@ Portfólio de Vitor Higino, que também apresenta o serviço de criação de sit
 - **Página do Vale Ermo 2**, com a lanterna ligada e desligada por clique. O feixe sai do personagem e segue o ponteiro.
 - **Serviços**: portfólio, sites de venda e vitrine digital.
 - **Como eu desenvolvo** e os bastidores de cada efeito deste site.
+- **Botão fixo de WhatsApp**, que aparece depois da abertura, fica escuro sobre o fundo verde e some na seção de contato.
 
 ## Projetos apresentados
 
@@ -20,7 +21,7 @@ Portfólio de Vitor Higino, que também apresenta o serviço de criação de sit
 | Dara Sublimação | Concluído e em uso | [Conhecer a vitrine](https://dara-sublimacao-vitrine.conectanegocio.chatgpt.site/) |
 | Vale Ermo 2 | Em desenvolvimento | [Jogar no navegador](https://vale-ermo-coop.onrender.com/) |
 | Coletivo Code | Atividade de curso | [Abrir o site](https://viitor-dev.github.io/coletivo-code/) |
-| Guia de Prompts | Concluído | [Ler no GitHub](https://github.com/Viitor-Dev/guia-prompts-ia) |
+| Guia de Prompts | Concluído | [Ler o guia](https://github.com/Viitor-Dev/guia-prompts-ia) |
 
 ## Como foi feito
 
@@ -39,7 +40,7 @@ O visitante que prefere menos movimento, nas configurações do aparelho, vê o 
 ```text
 index.html    página única, com todo o conteúdo
 estilo.css    identidade visual e responsividade
-app.js        rasgo, personagem, faixas e lanterna
+app.js        rasgo, personagem, faixas, lanterna e WhatsApp fixo
 servir.mjs    servidor simples para rodar no computador
 img/          personagem, capas dos projetos, foto e ícones
 vendor/       GSAP e ScrollTrigger
